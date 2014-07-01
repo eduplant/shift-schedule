@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://stats.resnet.uci.edu/schedule/scheduleschema" targetNamespace="http://stats.resnet.uci.edu/schedule/scheduleschema" elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<!--Building block declarations. Even though some of these are complexTypes,
+	they are the primitives of more complicated objects like switches, routers,
+	etc.-->
+	
+	<xs:element name="schedule">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="monday" type="sch:day"/>
+				<xs:element name="tuesday" type="sch:day"/>
+				<xs:element name="wednesday" type="sch:day"/>
+				<xs:element name="thursday" type="sch:day"/>
+				<xs:element name="friday" type="sch:day"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="day">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rnc" type="sch:rnc" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="shift">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="startIndex" type="xs:integer"/>
+				<xs:element name="stopIndex" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="rnc">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="displayName" type="xs:string" maxOccurs="1"/>
+				<xs:element name="shift" type="sch:shift" maxOccurs="unbounded"/>
+				<xs:element name="color" type="xs:string" maxOccurs="1"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>	
+</xs:schema>
