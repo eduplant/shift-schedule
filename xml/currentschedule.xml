@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<schedule xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://stats.resnet.uci.edu/schedule/scheduleschema">
+	<monday>
+		<rnc>
+			<displayName>Joe Smith</displayName>
+			<color>blue</color>
+			<shift>
+				<startIndex>0</startIndex>
+				<stopIndex>3</stopIndex>
+			</shift>
+			<shift>
+				<startIndex>4</startIndex>
+				<stopIndex>10</stopIndex>
+			</shift>
+		</rnc>
+		<rnc>
+			<displayName>Dave Brown</displayName>
+			<color>green</color>
+			<shift>
+				<startIndex>0</startIndex>
+				<stopIndex>3</stopIndex>
+			</shift>
+			<shift>
+				<startIndex>4</startIndex>
+				<stopIndex>10</stopIndex>
+			</shift>
+		</rnc>
+		<rnc>
+			<displayName>Bob Jones</displayName>
+			<color>red</color>
+			<shift>
+				<startIndex>0</startIndex>
+				<stopIndex>3</stopIndex>
+			</shift>
+			<shift>
+				<startIndex>4</startIndex>
+				<stopIndex>10</stopIndex>
+			</shift>
+		</rnc>
+	</monday>
+	<tuesday>
+		
+	</tuesday>
+	<wednesday>
+		
+	</wednesday>
+	<thursday>
+		
+	</thursday>
+	<friday>
+		
+	</friday>
+</schedule>
